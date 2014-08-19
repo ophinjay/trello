@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background: #7a7a78;
+}
+div, span {
+    color: #ffffff;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center {
+    text-align: center;
+}
+.title {
+    font-weight: bold;
+    font-size: 24px;
+}
+.subtitle {
+    font-size: 20px;
+    color: #393939;
+}
+.header {
+    padding: 5px 10px;
+    height: 30px;
+    background: #111111;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+.boards {
+    left: -195px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    padding-top: 50px;
+    background: #E3E3E3;
+    width: 10;
+}
+.slide {
+    -webkit-transition: left 1s ease-in-out;
+    -moz-transition: left 1s ease-in-out;
+    -o-transition: left 1s ease-in-out;
+    transition: left 1s ease-in-out;
+    left: 0px;
+}
