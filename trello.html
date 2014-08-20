@@ -4,15 +4,32 @@
 <head>
     <title>Task Manager</title>
     <link rel=stylesheet href="css/trello.css">
+    <script src="js/common.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/controller.js"></script>
+    <script type="text/javascript">
+    	(function () {
+    		document.addEventListener("DOMContentLoaded", function() {
+    			var Controller = trello.ModuleManager.get("Controller");
+    			Controller.init();
+    		});
+    	})(); 
+    </script>
 </head>
 
 <body>
     <header class="header">
     	<div class="title left">Task Manager</div>
     </header>
-    <aside class="boards">
+    <aside id="boards" class="boards">
     	<div class="subtitle center">Boards</div>
     </aside>
+    <div id="lists">
+    	
+    </div>
+    <div id="clickout">
+    	
+    </div>
 </body>
 
 </html>

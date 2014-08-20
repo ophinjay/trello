@@ -29,12 +29,14 @@ trello.ModuleManager = (function () {
 		if(!modules[name]) {
 			throw new Error("No such module defined");
 		}
+		return modules[name];
 	}
 
 	return {
 		define: define,
 		get: get
 	}
+	
 })();
 
 trello.ModuleManager.define("Element", [], function() {
@@ -78,12 +80,24 @@ trello.ModuleManager.define("Element", [], function() {
 			}
 		}
 
+		function on(event, handler) {
+			this.htmlElmt.addEventListener(event, handler);
+			return this;
+		}
+
+		function css(prop, value) {
+			this.htmlElmt.style[prop] = value;
+			return this;
+		}
+
 		return {
 			id: id,
+			on: on,
 			className: className,
 			attributes: attributes,
 			appendTo: appendTo,
-			html: html
+			html: html,
+			css: css
 		};
 	})();
 

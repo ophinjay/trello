@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 trello.ModuleManager.define("Board", ["Element"], function(Element) {
     function Board(title) {

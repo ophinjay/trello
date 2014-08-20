@@ -4,6 +4,8 @@
 }
 body {
     background: #7a7a78;
+    height: 100%;
+    width: 100%;
 }
 div, span {
     color: #ffffff;
@@ -32,7 +34,7 @@ div, span {
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 .boards {
     left: -195px;
@@ -42,6 +44,7 @@ div, span {
     padding-top: 50px;
     background: #E3E3E3;
     width: 10;
+    z-index: 2;
 }
 .slide {
     -webkit-transition: left 1s ease-in-out;
@@ -49,4 +52,10 @@ div, span {
     -o-transition: left 1s ease-in-out;
     transition: left 1s ease-in-out;
     left: 0px;
+}
+#clickout {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: transparent;
 }
