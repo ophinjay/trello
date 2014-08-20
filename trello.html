@@ -3,32 +3,41 @@
 
 <head>
     <title>Task Manager</title>
+    <link rel=stylesheet href="css/common.css">
     <link rel=stylesheet href="css/trello.css">
     <script src="js/common.js"></script>
-    <script src="js/components.js"></script>
-    <script src="js/controller.js"></script>
+    <script src="js/models.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/apps.js"></script>
     <script type="text/javascript">
-    	(function () {
-    		document.addEventListener("DOMContentLoaded", function() {
-    			var Controller = trello.ModuleManager.get("Controller");
-    			Controller.init();
-    		});
-    	})(); 
+    (function() {
+        document.addEventListener("DOMContentLoaded", function() {
+            var Application = trello.ModuleManager.get("Application");
+            Application.init();
+        });
+    })();
     </script>
 </head>
 
 <body>
     <header class="header">
-    	<div class="title left">Task Manager</div>
+        <div class="title left">Task Manager</div>
+        <div id="boards" class="rounded">
+            <div name="boardlist">
+                <div class="center">Test content</div>
+                <div class="center">Test content</div>
+                <div class="center">Test content</div>
+                <div class="center">Test content</div>
+                <div class="center">Test content</div>
+            </div>
+            <div name="tab" class="subtitle center rounded">Boards</div>
+        </div>
     </header>
-    <aside id="boards" class="boards">
-    	<div class="subtitle center">Boards</div>
-    </aside>
     <div id="lists">
-    	
+
     </div>
-    <div id="clickout">
-    	
+    <div id="clickout" class="clickout">
+
     </div>
 </body>
 

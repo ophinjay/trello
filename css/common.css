@@ -1,0 +1,59 @@
+html, body {
+    background: #7a7a78;
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+div, span {
+    color: #393939;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center {
+    text-align: center;
+}
+.title {
+    font-weight: bold;
+    font-size: 24px;
+}
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+}
+.slide {
+    position: fixed;
+    z-index: 2;
+    -webkit-transition: left 0.5s ease-in-out;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+}
+.slide-hidden {
+    left: -200px;
+}
+.slide-visible {
+    left: 0px;
+}
+.clickout {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    background: transparent;
+}
+.show {
+    display: block;
+}
