@@ -1,21 +1,24 @@
+body {
+    background: #393939;
+}
 #boards {
     width: 200px;
     max-height: 300px;
-    margin-top: 35px;
-    background: #E3E3E3;
-    border-radius:
+    margin-left: 10px;
 }
-#boards>[name=boardlist] {
+#boards>[name=list] {
     width: 200px;
     padding-bottom: 20px;
+    background: #E3E3E3;
 }
-#boards>[name=tab] {
-    padding: 2px 0px;
+#boards [name=tab] {
+    padding: 5px 10px;
+    background: #E3E3E3;
 }
-#boards>[name=tab]:hover {
+#boards [name=tab]:hover {
     cursor: pointer;
     background: #111111;
-    color: #ffffff;
+    color: #14A7C8;
 }
 .header {
     padding: 5px 10px;
@@ -23,9 +26,10 @@
     background: #111111;
 }
 .rounded {
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .title {
-    color: #ffffff;
+    color: #14A7C8;
+    padding-top: 2px;
 }

@@ -1,0 +1,12 @@
+[{
+    "title": "Welcome board",
+    "lastModified": 0,
+    "lists": [{
+        "title": "List 1",
+        "lastModified": 0,
+        "cards": [{
+        	"title": "card1",
+        	"lastModified": 0
+        }]
+    }]
+}]

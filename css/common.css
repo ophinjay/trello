@@ -1,5 +1,4 @@
 html, body {
-    background: #7a7a78;
     height: 100%;
     width: 100%;
 }
@@ -20,7 +19,6 @@ div, span {
     text-align: center;
 }
 .title {
-    font-weight: bold;
     font-size: 24px;
 }
 .subtitle {
@@ -36,16 +34,6 @@ div, span {
 .slide {
     position: fixed;
     z-index: 2;
-    -webkit-transition: left 0.5s ease-in-out;
-    -moz-transition: left 0.5s ease-in-out;
-    -o-transition: left 0.5s ease-in-out;
-    transition: left 0.5s ease-in-out;
-}
-.slide-hidden {
-    left: -200px;
-}
-.slide-visible {
-    left: 0px;
 }
 .clickout {
     height: 100%;
@@ -56,4 +44,7 @@ div, span {
 }
 .show {
     display: block;
+}
+.hide {
+    display: none;
 }

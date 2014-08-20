@@ -7,25 +7,12 @@ trello.ModuleManager.define("Card", ["Utilities"], function(Utilities) {
         this.board = inputObj.board;
         this.lastModified = inputObj.lastModified;
         Utilities.createReadOnlyProperty(this, "type", "card");
-        this.cards = [];
-    }
-
-    Card.prototype = (function() {
-        function setDescription(description) {
-            this.description = description;
-        }
-
-        return {
-            setDescription: setDescription
-        };
-    })();
-
-    function create(inputObj) {
-        return new Card(inputObj);
     }
 
     return {
-        create: create
+        create: function(inputObj) {
+            return new Card(inputObj);
+        }
     };
 });
 
@@ -36,12 +23,12 @@ trello.ModuleManager.define("List", ["Card", "Utilities"], function(Card, Utilit
         this.lastModified = inputObj.lastModified;
         Utilities.createReadOnlyProperty(this, "type", "list");
         this.cards = [];
-        if(inputObj.cards) {
+        if (inputObj.cards) {
             this.cards = inputObj.cards.map(function(card) {
                 card.list = this;
                 card.board = this.board;
                 return Card.create(card);
-            });
+            }, this);
         }
     }
 
@@ -60,12 +47,10 @@ trello.ModuleManager.define("List", ["Card", "Utilities"], function(Card, Utilit
         };
     })();
 
-    function create(inputObj) {
-        return new List(inputObj);
-    }
-
     return {
-        create: create
+        create: function(inputObj) {
+            return new List(inputObj);
+        }
     };
 });
 
@@ -75,16 +60,15 @@ trello.ModuleManager.define("Board", ["List", "Utilities"], function(List, Utili
         this.lastModified = inputObj.lastModified;
         Utilities.createReadOnlyProperty(this, "type", "board");
         this.lists = [];
-        if(inpuObj.lists) {
+        if (inputObj.lists) {
             this.lists = inputObj.lists.map(function(list) {
                 list.board = this;
                 return List.create(list);
-            });
+            }, this);
         }
     }
 
     Board.prototype = (function() {
-
         function addList(list) {
             this.lists.push(list);
         }
@@ -100,11 +84,9 @@ trello.ModuleManager.define("Board", ["List", "Utilities"], function(List, Utili
 
     })();
 
-    function create(inputObj) {
-        return new Board(inputObj);
-    }
-
     return {
-        create: create
+        create: function(inputObj) {
+            return new Board(inputObj);
+        }
     };
 });
