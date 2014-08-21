@@ -25,26 +25,17 @@ div, span {
     font-size: 16px;
     font-weight: bold;
 }
-.header {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 3;
-}
-.slide {
-    position: fixed;
-    z-index: 2;
-}
-.clickout {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    display: none;
-    background: transparent;
-}
 .show {
     display: block;
 }
 .hide {
     display: none;
+}
+.rounded-bottom, .rounded {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.rounded {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;    
 }

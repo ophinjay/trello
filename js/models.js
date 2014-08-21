@@ -5,7 +5,6 @@ trello.ModuleManager.define("Card", ["Utilities"], function(Utilities) {
         this.title = inputObj.title;
         this.list = inputObj.list;
         this.board = inputObj.board;
-        this.lastModified = inputObj.lastModified;
         Utilities.createReadOnlyProperty(this, "type", "card");
     }
 
@@ -20,7 +19,6 @@ trello.ModuleManager.define("List", ["Card", "Utilities"], function(Card, Utilit
     function List(inputObj) {
         this.title = inputObj.title;
         this.board = inputObj.board;
-        this.lastModified = inputObj.lastModified;
         Utilities.createReadOnlyProperty(this, "type", "list");
         this.cards = [];
         if (inputObj.cards) {
@@ -57,7 +55,6 @@ trello.ModuleManager.define("List", ["Card", "Utilities"], function(Card, Utilit
 trello.ModuleManager.define("Board", ["List", "Utilities"], function(List, Utilities) {
     function Board(inputObj) {
         this.title = inputObj.title;
-        this.lastModified = inputObj.lastModified;
         Utilities.createReadOnlyProperty(this, "type", "board");
         this.lists = [];
         if (inputObj.lists) {

@@ -43,6 +43,16 @@ trello.ModuleManager.define("Element", [], function() {
     }
 
     Element.prototype = (function() {
+        function getHTMLElement(obj) {
+            if (obj instanceof HTMLElement) {
+                return obj;
+            } else if (obj.htmlElmt && obj.htmlElmt instanceof HTMLElement) {
+                return obj.htmlElmt;
+            } else {
+                return undefined;
+            }
+        }
+
         function id(id) {
             if (id) {
                 this.htmlElmt.id = id;
@@ -65,19 +75,15 @@ trello.ModuleManager.define("Element", [], function() {
         }
 
         function appendTo(parentElmt) {
-            if (parentElmt instanceof HTMLElement) {
-                parentElmt.appendChild(this.htmlElmt);
-                return this;
-            } else if (parentElmt.htmlElmt && parentElmt.htmlElmt instanceof HTMLElement) {
-                parentElmt.htmlElmt.appendChild(this.htmlElmt);
-                return this;
-            } else {
-                return undefined;
+            if (parentElmt) {
+                var elmt = getHTMLElement(parentElmt);
+                elmt.appendChild(this.htmlElmt);
             }
+            return this;
         }
 
         function html(innerHTML) {
-            if (innerHTML) {
+            if (innerHTML != undefined) {
                 this.htmlElmt.innerHTML = innerHTML;
                 return this;
             } else {
@@ -86,12 +92,12 @@ trello.ModuleManager.define("Element", [], function() {
         }
 
         function on(eventName, handler) {
-            this.htmlElmt.addEventListener(eventName, handler.bind(this));
+            this.htmlElmt.addEventListener(eventName, handler);
             return this;
         }
 
         function off(eventName, handler) {
-            this.htmlElmt.removeEventListener(eventName, handler.bind(this));
+            this.htmlElmt.removeEventListener(eventName, handler);
         }
 
         function css(prop, value) {
@@ -109,6 +115,27 @@ trello.ModuleManager.define("Element", [], function() {
             return this;
         }
 
+        function insertAt(parentElmt, index) {
+            parentElmt = getHTMLElement(parentElmt);
+            var children = parentElmt.children;
+            var abIndex = Math.abs(index);
+            if (abIndex > 0 && abIndex <= children.length) {
+                var insertBefore = index > 0 ? (index - 1) : (index + children.length);
+                parentElmt.insertBefore(this.htmlElmt, children[insertBefore]);
+            } else {
+                throw new Error("Invalid index to insert child - " + index);
+            }
+        }
+
+        function value(val) {
+            if (val != undefined) {
+                this.htmlElmt.value = val;
+                return this;
+            } else {
+                return this.htmlElmt.value;
+            }
+        }
+
         return {
             id: id,
             on: on,
@@ -119,7 +146,9 @@ trello.ModuleManager.define("Element", [], function() {
             html: html,
             css: css,
             addClass: addClass,
-            removeClass: removeClass
+            removeClass: removeClass,
+            insertAt: insertAt,
+            value: value
         };
     })();
 
@@ -183,7 +212,7 @@ trello.ModuleManager.define("Events", [], function() {
             var subscribers = subRegistry[eventName];
             if (subscribers && subscribers.length > 0) {
                 for (var i = 0; i < subscribers.length; i++) {
-                    subscribers[i](eventObject);
+                    setTimeout(subscribers[i].bind(null, eventObject), 0);
                 }
             }
         }
@@ -209,51 +238,100 @@ trello.ModuleManager.define("Utilities", [], function() {
         });
     }
 
+    function stopPropagation(eventObject) {
+        eventObject = eventObject || window.event;
+        eventObject.stopPropagation();
+    }
     return {
-        createReadOnlyProperty: createReadOnlyProperty
+        createReadOnlyProperty: createReadOnlyProperty,
+        stopPropagation: stopPropagation
     };
 });
 
-trello.ModuleManager.define("DropDown", ["Element"], function(Element) {
+trello.ModuleManager.define("ListEntry", ["Element"], function(Element) {
+
+    return {
+        create: function(inputObj) {
+            var className = inputObj.className || "entry dd-entry rounded";
+            var entry = Element.create("div").className(className).html(inputObj.content);
+            if (typeof inputObj.index == "number") {
+                try {
+                    entry.insertAt(inputObj.container, inputObj.index);
+                } catch (ex) {
+                    entry.appendTo(inputObj.container);
+                }
+            } else {
+                entry.appendTo(inputObj.container);
+            }
+            return entry;
+        }
+    };
+});
+
+trello.ModuleManager.define("DropDown", ["Element", "Utilities", "ListEntry"], function(Element, Utilities, ListEntry) {
     function DropDown(inputObj) {
         this.heading = inputObj.heading;
         this.tabPosition = inputObj.tabPosition;
         this.id = inputObj.id;
-        this.widget = Element.create("div").id(inputObj.id).attributes({
-            "name": "dropdown"
-        }).className("slide rounded").css("marginTop", this.tabPosition + "px").appendTo(Element.get(inputObj.container));
+        this.container = inputObj.container.addClass("dropdown");
+        this.widget = Element.create("div").id(inputObj.id).className("rounded-bottom").appendTo(this.container);
         this.list = Element.create("div").attributes({
             "name": "list"
-        }).className("rounded").appendTo(this.widget);
-        this.btn = Element.create("span").attributes({
+        }).className("rounded-bottom hide").appendTo(this.widget);
+        this.btn = Element.create("div").attributes({
             "name": "tab"
-        }).className("subtitle rounded").html(inputObj.heading).appendTo(this.widget);
-        this.clickout = Element.get("#clickout");
+        }).className("subtitle rounded-bottom").html(inputObj.heading).css("width", inputObj.tabWidth + "px").appendTo(this.widget);
+
         //Event handlers
-        this.btn.on("click", slideDownHandler.bind(this));
-        this.clickout.on("click", clickoutHandler.bind(this));    
+        this.btn.on("click", tabClickHandler.bind(this));
+        this.menuClickHandler = clickoutHandler.bind(this, "menu-clicked");
+        this.outClickHandler = clickoutHandler.bind(this, "outside-clicked");
     }
 
-    function slideDownHandler() {
-        this.widget.css("top", this.btn.htmlElmt.offsetTop + "px");
+    function tabClickHandler(eventObject) {
+        Utilities.stopPropagation(eventObject);
+        this.list.removeClass("hide");
         this.btn.addClass("hide");
-        this.clickout.addClass("show");
+        this.list.on("click", this.menuClickHandler);
+        Element.get(document.body).on("click", this.outClickHandler);
     }
 
-    function clickoutHandler() {
-        this.widget.css("top", this.tabPosition + "px");
-        this.btn.removeClass("hide");
-        this.clickout.removeClass("show");
+    function clickoutHandler(clickLocation, eventObject) {
+        if (clickLocation == "outside-clicked") {
+        	this.hide();
+        } else {
+            Utilities.stopPropagation(eventObject);
+        }
     }
 
     DropDown.prototype = (function() {
-        var addEntry = function(entry) {
-            Element.get(entry).appendTo(this.list);
-        };
+        function addEntry(heading, index) {
+            return ListEntry.create({
+                content: heading,
+                container: this.list,
+                index: index
+            });
+        }
+
+        function addEditableEntry(placeholder) {
+            return Element.create("input").attributes({
+                "type": "text",
+                "placeholder": placeholder
+            }).appendTo(this.list).className("entry editable rounded");
+        }
+
+        function hide() {
+            this.list.addClass("hide");
+            this.btn.removeClass("hide");
+            this.list.off("click", this.menuClickHandler);
+            Element.get(document.body).off("click", this.outClickHandler);
+        }
 
         return {
-            addEntry: addEntry
-        }
+            addEntry: addEntry,
+            addEditableEntry: addEditableEntry,
+            hide: hide
+        };
     })();
 
     return {

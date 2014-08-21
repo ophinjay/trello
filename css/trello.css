@@ -6,30 +6,41 @@ body {
     max-height: 300px;
     margin-left: 10px;
 }
-#boards>[name=list] {
+.dropdown [name=list] {
     width: 200px;
-    padding-bottom: 20px;
+    padding: 10px;
     background: #E3E3E3;
 }
-#boards [name=tab] {
+.dropdown .entry {
+    font-weight: bold;
+    border: 2px solid;
+    margin: 5px 0px;
+}
+.dropdown [name=tab] {
     padding: 5px 10px;
     background: #E3E3E3;
 }
-#boards [name=tab]:hover {
+.dropdown [name=tab]:hover, .dropdown .dd-entry:hover {
     cursor: pointer;
-    background: #111111;
-    color: #14A7C8;
+    background: #95C11F;
+    color: #ffffff;
 }
-.header {
+.dropdown .dd-entry:hover {
+    border-color: transparent;
+}
+.dropdown .editable {
+    outline-width: 0px;
+    width: 185px;
+}
+.entry {
+    padding: 3px 5px;
+}
+#header {
     padding: 5px 10px;
     height: 30px;
     background: #111111;
 }
-.rounded {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
 .title {
-    color: #14A7C8;
+    color: #95C11F;
     padding-top: 2px;
 }
