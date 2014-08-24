@@ -1,38 +1,78 @@
 'use strict';
 
-trello.ModuleManager.define("Application", ["BoardListView", "Board", "Events"], function(BoardListView, Board, Events) {
-	var boards;
+trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppData", "Events", "Board"], function(BoardView, BoardMenuView, AppData, Events, Board) {
+    var boards;
 
-	function init() {
-		boards = getData();
-		BoardListView.render("#navbar", boards);
-		Events.subscribe("board-created", boardCreatedListener);
-	}
+    function init() {
+        boards = AppData.getData();
+        BoardMenuView.render("#navbar", boards);
+        BoardView.render("#board", boards[0]);
+        Events.subscribe("board-created", boardCreateListener);
+        Events.subscribe("board-deleted", boardDeleteListener);
+        Events.subscribe("board-updated", boardUpdateListener);
+        Events.subscribe("board-changed", boardChangeListener);
+        Events.subscribe("card-deleted", cardDeleteListener);
+        Events.subscribe("card-created", cardCreateListener);
+        Events.subscribe("card-updated", cardUpdateListener);
+        Events.subscribe("list-deleted", listDeleteListener);
+        Events.subscribe("list-updated", listUpdateListener);
+        Events.subscribe("list-created", listCreateListener);
+    }
 
-	function boardCreatedListener(newBoard) {
-		debugger;
-		boards.push(newBoard);
-		saveData();
-	}
+    function boardCreateListener(boardName) {
+        var newBoard = AppData.addBoard(boardName);
+        AppData.saveData();
+        BoardMenuView.add(newBoard);
+        BoardView.render("#board", newBoard);
+    }
 
-	function getData() {
-		//var data = JSON.parse(localStorage["trello"]);
-		var data = trello.data;
-		var boards = [];
-		if(data) {
-			for(var i = 0; i < data.length; i++) {
-				boards.push(Board.create(data[i]));
-			}
-		}
-		return boards;
-	}
+    function boardChangeListener(board) {
+        BoardView.render("#board", board);
+    }
 
-	function saveData() {
-		var dataStr = JSON.stringify(boards, ["title", "lists", "cards"]);
-		localStorage["trello"] = dataStr;
-	}
+    function boardUpdateListener(data) {
+    	data["board"].title = data["newTitle"];
+        AppData.saveData();
+    }
 
-	return {
-		init: init
-	};
+    function boardDeleteListener(deletedBoard) {
+        AppData.deleteBoard(deletedBoard);
+        BoardMenuView.remove(deletedBoard);
+        AppData.saveData();
+    }
+
+    function cardCreateListener(data) {
+        var newCard = AppData.addCard(data["list"], data["content"]);
+        BoardView.addCard(data["list"], newCard);
+        AppData.saveData();
+    }
+
+    function cardDeleteListener(card) {
+        AppData.deleteCard(card);
+        AppData.saveData();
+    }
+    
+    function cardUpdateListener(data) {
+    	data["card"].content = data["newContent"];
+    	AppData.saveData();
+    }
+
+    function listDeleteListener(list) {
+        AppData.deleteList(list);
+        AppData.saveData();
+    }
+
+    function listUpdateListener(data) {
+    	data["list"].title = data["newTitle"];
+    	AppData.saveData();
+    }
+
+    function listCreateListener(board) {
+    	var list = AppData.addList(board, "New List");
+    	BoardView.addList(list);
+    	AppData.saveData();
+    }
+    return {
+        init: init
+    };
 });

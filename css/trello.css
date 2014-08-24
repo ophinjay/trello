@@ -2,38 +2,8 @@ body {
     background: #393939;
 }
 #boards {
-    width: 200px;
-    max-height: 300px;
     margin-left: 10px;
-}
-.dropdown [name=list] {
-    width: 200px;
-    padding: 10px;
-    background: #E3E3E3;
-}
-.dropdown .entry {
-    font-weight: bold;
-    border: 2px solid;
-    margin: 5px 0px;
-}
-.dropdown [name=tab] {
-    padding: 5px 10px;
-    background: #E3E3E3;
-}
-.dropdown [name=tab]:hover, .dropdown .dd-entry:hover {
-    cursor: pointer;
-    background: #95C11F;
-    color: #ffffff;
-}
-.dropdown .dd-entry:hover {
-    border-color: transparent;
-}
-.dropdown .editable {
-    outline-width: 0px;
-    width: 185px;
-}
-.entry {
-    padding: 3px 5px;
+    position: fixed;
 }
 #header {
     padding: 5px 10px;
@@ -43,4 +13,16 @@ body {
 .title {
     color: #95C11F;
     padding-top: 2px;
+}
+#board {
+    padding: 50px 30px;
+}
+#board [name=lists] {
+    position: absolute;
+}
+#board [name=lists] > div {
+    float: left;
+}
+.list>[name=header]>[name=actions] div:first-child {
+    padding-top: 1px;
 }

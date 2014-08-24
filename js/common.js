@@ -6,6 +6,7 @@ if (!window["trello"]) {
 
 trello.ModuleManager = (function() {
     var modules = {};
+    var events = {};
 
     function define(name, deps, fn) {
         if (modules[name]) {
@@ -20,8 +21,13 @@ trello.ModuleManager = (function() {
             }
             return modules[depName];
         });
-        modules[name] = fn.apply(null, deps);
-        return modules[name];
+        var newModule = fn.apply(null, deps);
+        if (!newModule) {
+            throw new Error("The module constructor for " + name + " returned an undefined value!!")
+        } else {
+            modules[name] = newModule;
+        }
+        return newModule;
     }
 
     function get(name) {
@@ -82,6 +88,14 @@ trello.ModuleManager.define("Element", [], function() {
             return this;
         }
 
+        function appendChild(childElmt) {
+            if (childElmt) {
+                var elmt = getHTMLElement(childElmt);
+                this.htmlElmt.appendChild(elmt);
+            }
+            return this;
+        }
+
         function html(innerHTML) {
             if (innerHTML != undefined) {
                 this.htmlElmt.innerHTML = innerHTML;
@@ -136,9 +150,34 @@ trello.ModuleManager.define("Element", [], function() {
             }
         }
 
+        function get(query) {
+            if (typeof query != "string") {
+                throw new Error("Ivalid query!!")
+            }
+            return getInstance(this.htmlElmt.querySelector(query));
+        }
+
+        function child(n) {
+            return getInstance(this.htmlElmt.childNodes[n]);
+        }
+
+        function remove() {
+            this.htmlElmt.parentNode.removeChild(this.htmlElmt);
+        }
+
+        function replaceChild(replaceThis, withThis) {
+            replaceThis = getHTMLElement(replaceThis);
+            withThis = getHTMLElement(withThis);
+            this.htmlElmt.replaceChild(withThis, replaceThis);
+            return this;
+        }
+
         return {
             id: id,
+            remove: remove,
             on: on,
+            get: get,
+            child: child,
             off: off,
             className: className,
             attributes: attributes,
@@ -148,9 +187,24 @@ trello.ModuleManager.define("Element", [], function() {
             addClass: addClass,
             removeClass: removeClass,
             insertAt: insertAt,
-            value: value
+            value: value,
+            appendChild: appendChild,
+            replaceChild: replaceChild
         };
     })();
+
+    function getInstance(query, doc) {
+        if (query instanceof Element) {
+            return query;
+        }
+        if (query instanceof HTMLElement) {
+            var elmt = query;
+        } else {
+            doc = doc || document;
+            elmt = doc.querySelector(query);
+        }
+        return new Element(elmt);
+    }
 
     return {
         create: function(tagName, doc) {
@@ -158,15 +212,7 @@ trello.ModuleManager.define("Element", [], function() {
             var elmt = doc.createElement(tagName);
             return new Element(elmt);
         },
-        get: function(query, doc) {
-            if (query instanceof HTMLElement) {
-                var elmt = query;
-            } else {
-                doc = doc || document;
-                elmt = doc.querySelector(query);
-            }
-            return new Element(elmt);
-        }
+        get: getInstance
     };
 });
 
@@ -175,15 +221,15 @@ trello.ModuleManager.define("Events", [], function() {
 
     var supported = {
         "board-created": true,
-        "board-title-changed": true,
+        "board-changed": true,
         "board-deleted": true,
-        "list-created": true,
-        "list-title-changed": true,
-        "list-deleted": true,
+        "board-updated": true,
+        "card-deleted": true,
         "card-created": true,
-        "card-moved": true,
-        "card-title-changed": true,
-        "card-deleted": true
+        "list-deleted": true,
+        "list-updated": true,
+        "list-created": true,
+        "card-updated": true
     };
 
     function subscribe(eventName, handler) {
@@ -228,7 +274,7 @@ trello.ModuleManager.define("Events", [], function() {
     };
 });
 
-trello.ModuleManager.define("Utilities", [], function() {
+trello.ModuleManager.define("Utilities", ["Element"], function(Element) {
     function createReadOnlyProperty(object, property, value) {
         return Object.defineProperty(object, property, {
             value: value,
@@ -242,16 +288,79 @@ trello.ModuleManager.define("Utilities", [], function() {
         eventObject = eventObject || window.event;
         eventObject.stopPropagation();
     }
+
+    function spliceAndUpdateIndex(array, index) {
+        array.splice(index, 1);
+        for(var i = index; i < array.length; i++) {
+            array[index].index--;
+        }
+        return array;
+    }
+
+    function getLoadedHTML(html) {
+        return Element.create("div").html(html).child(0);
+    }
     return {
         createReadOnlyProperty: createReadOnlyProperty,
-        stopPropagation: stopPropagation
+        stopPropagation: stopPropagation,
+        spliceAndUpdateIndex: spliceAndUpdateIndex,
+        getLoadedHTML: getLoadedHTML
     };
 });
 
-trello.ModuleManager.define("ListEntry", ["Element"], function(Element) {
+trello.ModuleManager.define("DropDown", ["Events", "Element", "Utilities"], function(Events, Element, Utilities) {
 
-    return {
-        create: function(inputObj) {
+    function DropDown(inputObj) {
+        this.heading = inputObj.heading;
+        this.tabPosition = inputObj.tabPosition;
+        this.id = inputObj.id;
+        this.container = inputObj.container.addClass("dropdown");
+        this.widget = Element.create("div").id(inputObj.id).className("rounded-bottom").appendTo(this.container);
+        this.list = Element.create("div").attributes({
+            "name": "list"
+        }).className("rounded-bottom hide").appendTo(this.widget);
+        this.btn = Element.create("div").attributes({
+            "name": "tab"
+        }).className("subtitle rounded-bottom").html(inputObj.heading).css("width", inputObj.tabWidth + "px").appendTo(this.widget);
+        this.editableEntries = [];
+
+        //Event handlers
+        this.btn.on("click", tabClickHandler.bind(this));
+        this.menuClickHandler = clickoutHandler.bind(this, "menu-clicked");
+        this.outClickHandler = clickoutHandler.bind(this, "outside-clicked");
+        this.entryClickedHandler = entryClickedHandler.bind(this);
+    }
+
+    function tabClickHandler(eventObject) {
+        Utilities.stopPropagation(eventObject);
+        this.list.removeClass("hide");
+        this.btn.addClass("hide");
+        this.list.on("click", this.menuClickHandler);
+        Element.get(document.body).on("click", this.outClickHandler);
+    }
+
+    function clickoutHandler(clickLocation, eventObject) {
+        if (clickLocation == "outside-clicked") {
+            this.hide();
+        } else {
+            Utilities.stopPropagation(eventObject);
+        }
+    }
+
+    function entryClickedHandler(eventObject) {
+        this.hide();
+    }
+
+    DropDown.prototype = (function() {
+        function addEntry(heading, index) {
+            return createEntry({
+                content: heading,
+                container: this.list,
+                index: index
+            }).on("click", this.entryClickedHandler);
+        }
+
+        function createEntry(inputObj) {
             var className = inputObj.className || "entry dd-entry rounded";
             var entry = Element.create("div").className(className).html(inputObj.content);
             if (typeof inputObj.index == "number") {
@@ -265,72 +374,35 @@ trello.ModuleManager.define("ListEntry", ["Element"], function(Element) {
             }
             return entry;
         }
-    };
-});
-
-trello.ModuleManager.define("DropDown", ["Element", "Utilities", "ListEntry"], function(Element, Utilities, ListEntry) {
-    function DropDown(inputObj) {
-        this.heading = inputObj.heading;
-        this.tabPosition = inputObj.tabPosition;
-        this.id = inputObj.id;
-        this.container = inputObj.container.addClass("dropdown");
-        this.widget = Element.create("div").id(inputObj.id).className("rounded-bottom").appendTo(this.container);
-        this.list = Element.create("div").attributes({
-            "name": "list"
-        }).className("rounded-bottom hide").appendTo(this.widget);
-        this.btn = Element.create("div").attributes({
-            "name": "tab"
-        }).className("subtitle rounded-bottom").html(inputObj.heading).css("width", inputObj.tabWidth + "px").appendTo(this.widget);
-
-        //Event handlers
-        this.btn.on("click", tabClickHandler.bind(this));
-        this.menuClickHandler = clickoutHandler.bind(this, "menu-clicked");
-        this.outClickHandler = clickoutHandler.bind(this, "outside-clicked");
-    }
-
-    function tabClickHandler(eventObject) {
-        Utilities.stopPropagation(eventObject);
-        this.list.removeClass("hide");
-        this.btn.addClass("hide");
-        this.list.on("click", this.menuClickHandler);
-        Element.get(document.body).on("click", this.outClickHandler);
-    }
-
-    function clickoutHandler(clickLocation, eventObject) {
-        if (clickLocation == "outside-clicked") {
-        	this.hide();
-        } else {
-            Utilities.stopPropagation(eventObject);
-        }
-    }
-
-    DropDown.prototype = (function() {
-        function addEntry(heading, index) {
-            return ListEntry.create({
-                content: heading,
-                container: this.list,
-                index: index
-            });
-        }
 
         function addEditableEntry(placeholder) {
-            return Element.create("input").attributes({
+            var entry = Element.create("input").attributes({
                 "type": "text",
                 "placeholder": placeholder
             }).appendTo(this.list).className("entry editable rounded");
+            this.editableEntries.push(entry);
+            return entry;
         }
 
         function hide() {
             this.list.addClass("hide");
             this.btn.removeClass("hide");
+            for (var i = 0; i < this.editableEntries.length; i++) {
+                this.editableEntries[i].value("");
+            }
             this.list.off("click", this.menuClickHandler);
             Element.get(document.body).off("click", this.outClickHandler);
+        }
+
+        function remove(index) {
+            this.list.child(index).remove();
         }
 
         return {
             addEntry: addEntry,
             addEditableEntry: addEditableEntry,
-            hide: hide
+            hide: hide,
+            remove: remove
         };
     })();
 
