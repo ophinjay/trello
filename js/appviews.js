@@ -1,10 +1,27 @@
 "use strict";
 
+/********************************************************************************************/
+/*  Modules defined in this library are used to render and manipulate the application view  */
+/********************************************************************************************/
+
+/**
+ *  Module to render and manage the menu that displays the list of boards in the application
+ *      - Creates a dropdown with the list of boards in the application
+ *      - Provides interface to add new boards and switch beween boards
+ */
 trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], function(Element, DropDown, Events) {
 
     var dropDown;
     var entries = [];
 
+    /**
+     *  Renders a dropdown menu with an entry for every board in the array of boards passed to it
+     *  ** Inputs **
+     *  container - container in which the dropdown is to be rendered
+     *  boards - list of boards
+     *  ** Returns **
+     *  created DropDown object
+     */
     function render(container, boards) {
         container = Element.get(container).html("");
         dropDown = DropDown.create({
@@ -21,10 +38,13 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
         return dropDown;
     }
 
+    //Triggered when a menu entry is clicked. Publishes the event "board-changed"
     function menuEntryClickHandler(eventObject) {
         Events.publish("board-changed", this);
     }
 
+    //Triggered when the user presses a key in the input for adding new boards. If the user presses Enter key, 
+    //the "board-created" event is published and the menu is hidden
     function keyUpHandler(eventObject) {
         var code = (typeof eventObject.which == "number") ? eventObject.which : eventObject.keyCode;
         if (code == 13) {
@@ -36,19 +56,23 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
         }
     }
 
+    //Private method. Adds a new board entry to the dropdown in the given index
     function addToDropDown(board, index) {
         var newEntry = dropDown.addEntry(board.title, index + 1).on("click", menuEntryClickHandler.bind(board));
         entries.push(newEntry);
     }
 
+    //Adds a new board entry to the dropdown
     function add(board) {
         addToDropDown(board, -2);
     }
 
+    //Removes a board entry from the dropdown
     function remove(board) {
         dropDown.remove(board.index);
     }
 
+    //Updates the board entry with data passed to it
     function refresh(board) {
         entries[board.index].html(board.title);
     }
@@ -61,7 +85,12 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
     };
 });
 
-
+/**
+ *  Module to render and manage a card
+ *      - Creates a card entry
+ *      - Provides interface to edit contents of a card
+ *      - Provides interface to delete a card
+ */
 trello.ModuleManager.define("CardView", ["Events", "Utilities"], function(Events, Utilities) {
     var template = '<div class="entry list-entry rounded"><div name="content"><div name="removecard" class="remove" title="Remove card">x</div><pre class="content">{content}</pre></div></div>';
     var updateCardTemplate = '<div><textarea class="newcard rounded"></textarea><div><button name="save" class="button rounded">Save</button><button name="cancel" class="button rounded">Cancel</button></div></div>';
@@ -148,6 +177,13 @@ trello.ModuleManager.define("CardView", ["Events", "Utilities"], function(Events
     };
 });
 
+/**
+ *  Module to render and manage a list
+ *      - Creates a list entry in the board
+ *      - Provides interface to edit title of a list
+ *      - Provides interface to add a new card
+ *      - Provides interface to delete a list
+ */
 trello.ModuleManager.define("ListView", ["Element", "Events", "CardView", "Utilities"], function(Element, Events, CardView, Utilities) {
     var listTemplate = '<div class="list rounded"><div name="header" class="rounded-top"><div name="title">{title}</div><input type="text" class="left hide" name="edit"><div name="actions"><div name="addcard" title="Add card">+</div><div name="removelist" title="Remove list">x</div></div></div><div name="content" class="rounded-bottom"><div class="entry list-entry rounded hide" name="newcard"><textarea class="newcard rounded"></textarea><div><button name="add" class="button rounded">Add</button><button name="cancel" class="button rounded">Cancel</button></div></div></div></div>';
 
@@ -267,6 +303,13 @@ trello.ModuleManager.define("ListView", ["Element", "Events", "CardView", "Utili
     };
 });
 
+/**
+ *  Module to render and manage the board view
+ *      - Creates a board view with it associated lists
+ *      - Provides interface to edit title of the board
+ *      - Provides interface to add a new list
+ *      - Provides interface to delete the board
+ */
 trello.ModuleManager.define("BoardView", ["Element", "ListView", "Events", "Utilities"], function(Element, ListView, Events, Utilities) {
     var listViews;
     var template = '<div class="boardheader rounded" name="boardheading"><div name="title" class="boardtitle">{title}</div><input type="text" name="edit" class="hide"><button name="add" class="button remboard rounded">Add List</button><button name="remove" class="button remboard rounded">Delete Board</button></div><div name="lists"></div>';

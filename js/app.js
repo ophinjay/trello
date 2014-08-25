@@ -9,7 +9,7 @@ trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppDa
     var boards;
 
     /**
-     *  Initializes the application
+     *  Initializes the application. Called from the HTML page that renders the application.
      *      - Retrieves data from localStorage
      *      - Creates BoardMenuView for creating new boards and switching between boards
      *      - Renders the first board in the application(if any)
@@ -110,7 +110,7 @@ trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppDa
         AppData.deleteList(list);
         AppData.saveData();
     }
-    
+
     //Card create, update, delete listeners
     /**
      *  Triggered when a new card is created in the UI
