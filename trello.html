@@ -12,7 +12,10 @@
     <script type="text/javascript">
     (function() {
         document.addEventListener("DOMContentLoaded", function() {
+            //Get the main application controller module with the module manager
             var Application = trello.ModuleManager.get("Application");
+
+            //Initialize the application
             Application.init();
         });
     })();
