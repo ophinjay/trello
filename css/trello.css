@@ -17,9 +17,6 @@ body {
 #board {
     padding: 50px 30px;
 }
-#board [name=lists] {
-    position: absolute;
-}
 #board [name=lists] > div {
     float: left;
 }

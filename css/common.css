@@ -6,9 +6,6 @@ body {
     margin: 0px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-div {
-    color: #393939;
-}
 .left {
     float: left;
 }
@@ -39,6 +36,7 @@ div {
     width: 200px;
     padding: 10px;
     background: #111111;
+    border: 2px solid #393939;
     border-top: 0px;
 }
 .dropdown .entry {
@@ -49,7 +47,8 @@ div {
 }
 .dropdown [name=tab] {
     padding: 5px 10px;
-    background: #E3E3E3;
+    background: #111111;
+    color: #95C11F;
 }
 .dropdown [name=tab]:hover, .dropdown .dd-entry:hover {
     cursor: pointer;
@@ -67,6 +66,11 @@ div {
 }
 .entry {
     padding: 3px 5px;
+}
+.entry pre.content {
+    margin: 0px;
+    white-space: pre-wrap;
+    font-family: sans-serif;
 }
 /* List classes */
 
@@ -128,9 +132,10 @@ textarea.newcard {
 }
 .button {
     color: #95C11F;
+    border: 2px solid #95C11F;
     background: #111111;
-    width: 60px;
     padding: 5px;
+    outline-width: 0px;
     font-weight: bold;
 }
 .button:hover {
@@ -144,16 +149,7 @@ textarea.newcard {
     padding: 5px;
 }
 .remboard{
-    border: 2px solid #95C11F;
     margin-left: 15px;
-    background: #111111;
-    color: #95c11f;
-    font-weight: bold;
-}
-.remboard:hover {
-    background: #95C11F;
-    color: white;
-    cursor: pointer;
 }
 .boardtitle {
     width: 157px;
@@ -174,10 +170,3 @@ textarea.newcard {
 .hide {
     display: none;
 }
-.clearfix:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-};

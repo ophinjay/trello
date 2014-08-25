@@ -95,7 +95,7 @@ trello.ModuleManager.define("Board", ["List", "Utilities"], function(List, Utili
     };
 });
 
-trello.ModuleManager.define("AppData", ["Board", "Utilities", "Card", "List"], function(Board, Utilities, Card, List) {
+trello.ModuleManager.define("AppData", ["Board", "Card", "List"], function(Board, Card, List) {
 
     var boards = [];
 

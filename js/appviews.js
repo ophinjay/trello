@@ -55,8 +55,8 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
 });
 
 
-trello.ModuleManager.define("CardView", ["Element", "Events", "Utilities"], function(Element, Events, Utilities) {
-    var template = '<div class="entry list-entry rounded"><div name="content"><div name="removecard" class="remove" title="Remove card">x</div><span>{content}</span></div></div>';
+trello.ModuleManager.define("CardView", ["Events", "Utilities"], function(Events, Utilities) {
+    var template = '<div class="entry list-entry rounded"><div name="content"><div name="removecard" class="remove" title="Remove card">x</div><pre class="content">{content}</pre></div></div>';
     var updateCardTemplate = '<div><textarea class="newcard rounded"></textarea><div><button name="save" class="button rounded">Save</button><button name="cancel" class="button rounded">Cancel</button></div></div>';
 
     function CardView(container, card) {
@@ -88,7 +88,7 @@ trello.ModuleManager.define("CardView", ["Element", "Events", "Utilities"], func
             newContent: newContent
         });
         hideEdit.call(this);
-        this.cardElmt.get("[name=content]>span").html(newContent);
+        this.cardElmt.get("[name=content]>pre").html(newContent);
     }
 
     function cancelHandler() {
@@ -262,8 +262,8 @@ trello.ModuleManager.define("ListView", ["Element", "Events", "CardView", "Utili
 });
 
 trello.ModuleManager.define("BoardView", ["Element", "ListView", "Events", "Utilities"], function(Element, ListView, Events, Utilities) {
-    var listViews = [];
-    var template = '<div class="boardheader rounded" name="boardheading"><div name="title" class="boardtitle">{title}</div><input type="text" name="edit" class="hide"><button name="add" class="remboard rounded">Add List</button><button name="remove" class="remboard rounded">Delete Board</button></div><div name="lists"></div>';
+    var listViews;
+    var template = '<div class="boardheader rounded" name="boardheading"><div name="title" class="boardtitle">{title}</div><input type="text" name="edit" class="hide"><button name="add" class="button remboard rounded">Add List</button><button name="remove" class="button remboard rounded">Delete Board</button></div><div name="lists"></div>';
     var currentBoard;
     var boardContainer;
     var editField;
@@ -275,6 +275,7 @@ trello.ModuleManager.define("BoardView", ["Element", "ListView", "Events", "Util
         if (!board) {
             return;
         }
+        listViews = [];
         currentBoard = board;
         boardContainer = Element.get(container);
         container = boardContainer.html(template.replace(/\{title\}/, board.title));

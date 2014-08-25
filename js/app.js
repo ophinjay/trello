@@ -1,6 +1,6 @@
 'use strict';
 
-trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppData", "Events", "Board"], function(BoardView, BoardMenuView, AppData, Events, Board) {
+trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppData", "Events"], function(BoardView, BoardMenuView, AppData, Events) {
     var boards;
 
     function init() {
