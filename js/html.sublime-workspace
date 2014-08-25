@@ -1,0 +1,1674 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"script",
+				"script	HTML - Script"
+			],
+			[
+				"style",
+				"style	Tag"
+			],
+			[
+				"vi",
+				"visibility"
+			],
+			[
+				"texta",
+				"text-align"
+			],
+			[
+				"break",
+				"break-all"
+			],
+			[
+				"html",
+				"htmlElmt"
+			],
+			[
+				"inser",
+				"insertBefore"
+			],
+			[
+				"appen",
+				"appendChild"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"child",
+				"children"
+			],
+			[
+				"new",
+				"newBoard"
+			],
+			[
+				"boar",
+				"boardName"
+			],
+			[
+				"out",
+				"outline-width"
+			],
+			[
+				"add",
+				"addEntry"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"Module",
+				"ModuleManager"
+			],
+			[
+				"evnet",
+				"eventObject"
+			],
+			[
+				"event",
+				"eventObject"
+			],
+			[
+				"evetn",
+				"eventObject"
+			],
+			[
+				"clic",
+				"clickLocation"
+			],
+			[
+				"creat",
+				"createReadOnlyProperty"
+			],
+			[
+				"sub",
+				"subRegistry"
+			],
+			[
+				"Modul",
+				"ModuleManager"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"border-ra",
+				"border-bottom-right-radius"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"styl",
+				"style	Tag"
+			],
+			[
+				"htm",
+				"htmlElmt"
+			],
+			[
+				"inner",
+				"innerHeight"
+			],
+			[
+				"time",
+				"timeOutId"
+			],
+			[
+				"scrip",
+				"script	Tag"
+			],
+			[
+				"scr",
+				"script	HTML - Script"
+			],
+			[
+				"com",
+				"compile-dir-angular	compile"
+			],
+			[
+				"requi",
+				"rrequire	require"
+			],
+			[
+				"li",
+				"link-dir-angular	link"
+			],
+			[
+				"congt",
+				"controller-dir-angular	dcontroller"
+			],
+			[
+				"re",
+				"require-dir-angular	require"
+			],
+			[
+				"Data",
+				"DataModule"
+			],
+			[
+				"dire",
+				"directive-angular	directive"
+			],
+			[
+				"generate",
+				"generatedObjects"
+			],
+			[
+				"gene",
+				"generatedObjects"
+			],
+			[
+				"services",
+				"servicesConfig"
+			],
+			[
+				"instance",
+				"instanceServices"
+			],
+			[
+				"servi",
+				"services"
+			],
+			[
+				"service",
+				"servicegroups"
+			],
+			[
+				"scri",
+				"script	<script>"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"disa",
+				"distanceY"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"quer",
+				"query"
+			],
+			[
+				"even",
+				"eventName"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"return",
+				"returnObj"
+			],
+			[
+				"retur",
+				"returnObj"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"prop",
+				"property"
+			],
+			[
+				"con",
+				"configArr"
+			],
+			[
+				"ser",
+				"serviceConfig"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"mode",
+				"modelClass"
+			],
+			[
+				"reso",
+				"resolution"
+			],
+			[
+				"data",
+				"dataObj"
+			],
+			[
+				"resol",
+				"resolveObject"
+			],
+			[
+				"gener",
+				"genericService"
+			],
+			[
+				"serv",
+				"serviceGroup"
+			],
+			[
+				"seri",
+				"serviceGroup"
+			],
+			[
+				"getter",
+				"getterValue"
+			],
+			[
+				"orderli",
+				"orderline_extraProtoFns"
+			],
+			[
+				"variabe",
+				"variableMap"
+			],
+			[
+				"vari",
+				"variableMap"
+			],
+			[
+				"variabl",
+				"variableMap"
+			],
+			[
+				"defa",
+				"defaultConstructor"
+			],
+			[
+				"target",
+				"targetConstructor"
+			],
+			[
+				"file",
+				"fileDict"
+			],
+			[
+				"to",
+				"toBeCopied"
+			],
+			[
+				"conf",
+				"confirmActionHandler"
+			],
+			[
+				"input",
+				"inputObj"
+			],
+			[
+				"delete",
+				"deleteDialogObj"
+			],
+			[
+				"inptu",
+				"inputObj"
+			],
+			[
+				"current",
+				"currentConfig"
+			],
+			[
+				"curren",
+				"currentConfig"
+			],
+			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"valida",
+				"validateFieldBeforePublish"
+			],
+			[
+				"remvoe",
+				"removeClass"
+			],
+			[
+				"lab",
+				"label	<label>"
+			],
+			[
+				"before",
+				"beforeValueSet"
+			],
+			[
+				"beofre",
+				"beforeValueGet"
+			],
+			[
+				"beforeVa",
+				"beforeValueGet"
+			],
+			[
+				"this",
+				"thisRow"
+			],
+			[
+				"send",
+				"sendTableWidget"
+			],
+			[
+				"beforev",
+				"beforeValueSetFn"
+			],
+			[
+				"getTye",
+				"getTypeReference"
+			],
+			[
+				"currentdo",
+				"currentDocToSend"
+			],
+			[
+				"selec",
+				"selectable"
+			],
+			[
+				"colu",
+				"columnConfig"
+			],
+			[
+				"erro",
+				"errorHandler"
+			],
+			[
+				"success",
+				"successHandler"
+			],
+			[
+				"qsDi",
+				"qsdialog"
+			],
+			[
+				"getOre",
+				"getOrderLineReport"
+			],
+			[
+				"order",
+				"orderLineReport"
+			],
+			[
+				"getOrder",
+				"getOrderLineReport"
+			],
+			[
+				"type",
+				"typebyreference"
+			],
+			[
+				"status",
+				"statusRadio"
+			],
+			[
+				"orderlin",
+				"orderLineContainer"
+			],
+			[
+				"orderline",
+				"orderline"
+			],
+			[
+				"setHandl",
+				"setHandledByUserName"
+			],
+			[
+				"servce",
+				"serviceObj"
+			],
+			[
+				"geth",
+				"getHandledByUserName"
+			],
+			[
+				"handle",
+				"handledByUserName"
+			],
+			[
+				"hand",
+				"handledBy"
+			],
+			[
+				"suppor",
+				"supportedColumns"
+			],
+			[
+				"uplo",
+				"uploader"
+			],
+			[
+				"getTyp",
+				"getTypeReference"
+			],
+			[
+				"servc",
+				"serviceObj"
+			],
+			[
+				"des",
+				"descElmt"
+			],
+			[
+				"de",
+				"descElmt"
+			],
+			[
+				"isd",
+				"isDefault"
+			],
+			[
+				"is",
+				"isDefault"
+			],
+			[
+				"widget",
+				"widgetObj"
+			],
+			[
+				"wid",
+				"widgetObj"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"move",
+				"moveDialog"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/HTML files/hash.html",
+			"settings":
+			{
+				"buffer_size": 359,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/HTML files/history.html",
+			"settings":
+			{
+				"buffer_size": 556,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/HTML files/nodecount.html",
+			"settings":
+			{
+				"buffer_size": 355,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"rmeove",
+				"Package Control: Remove Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"insat",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"",
+				"File: Copy Path From Project"
+			],
+			[
+				"ajvas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"li",
+				"Package Control: List Packages"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"file co",
+				"File: Copy Path From Project"
+			],
+			[
+				"fileco",
+				"File: Copy Path"
+			],
+			[
+				"find",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"prefs",
+				"Preferences: SublimeLint Settings – User"
+			],
+			[
+				"insate",
+				"Package Control: Install Package"
+			],
+			[
+				"remvoe",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"intal",
+				"Package Control: Install Package"
+			],
+			[
+				"inta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"pask",
+				"Preferences: Browse Packages"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"listpa",
+				"Package Control: List Packages"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet:cpf",
+				"Snippet: cpf_var_func"
+			],
+			[
+				"sjava",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"xm",
+				"Snippet: XML Processing Instruction"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Snippet: js",
+				"Snippet: Object Value JS"
+			],
+			[
+				"javascri",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Snippet: s",
+				"Snippet: singleton_class()"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 243.0,
+		"history":
+		[
+			"command 'jsl -stdin'",
+			"command \"jsl -stdin\"",
+			"command jsl -stdin",
+			"jsl -stdin",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/HTML files/test.html",
+		"/D/HTML files/float.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/css/common.css",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/css/trello.css",
+		"/E/NetBeansProjects/CPFUploader/src/cpfuploader/utilities/XMLUtilities.java",
+		"/E/NetBeansProjects/CPFUploader/src/cpfuploader/services/webservices/LoginService.java",
+		"/E/NetBeansProjects/CPFUploader/src/cpfuploader/services/webservices/CPFService.java",
+		"/C/Users/jjophin.VG/AppData/Local/Temp/7zO5075.tmp/OAuthLiveSampleClient.java",
+		"/C/Users/jjophin.VG/AppData/Local/Temp/7zO1F46.tmp/OAuthService.java",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/trello.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/js/app.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/js/models.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/js/renderer.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/trello/css/bootstrap.css",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/tests/directiveSpec.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/js/directive.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/AngularMaps/index.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/AngularMaps/js/maps.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/AngularMaps/js/library.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/tests/specHelper.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/js/closure.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/data.json",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/index.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/cambium-tasks/js/jspattern.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/debouncer/auto.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/debouncer/auto.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/my-exps-in-js/Angular task/directive.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/my-exps-in-js/Angular task/index.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/my-exps-in-js/Angular task/data.json",
+		"/E/Spring Workspace/FortierraMaps/WebContent/js/maps.js",
+		"/E/Spring Workspace/FortierraMaps/WebContent/js/library.js",
+		"/C/Users/jjophin.VG/AngularMaps/js/maps.js",
+		"/C/Users/jjophin.VG/AngularMaps/js/library.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/my-exps-in-js/this.$super/super.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/my-exps-in-js/services/services.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/my-exps-in-js/object crawler/object crawler.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/src/yam-service.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/examples/services.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/examples/order.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/index.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/examples/example.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/src/yam-model.js",
+		"/E/Workspaces/Javascript Workspace/Test Project/test.html",
+		"/D/PhantomJS/mapshot.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/README.md",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/javascripts/main.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/stylesheets/stylesheet.css",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/images/intro_example.PNG",
+		"/E/dropbox-python-sdk-2.1.0/example/flask_app/simple_dropbox_app.py",
+		"/E/dropbox-python-sdk-2.1.0/example/cli_client.py",
+		"/C/Users/jjophin.VG/Desktop/orders.sql",
+		"/E/Maps/NoiseMap.html",
+		"/C/Users/jjophin.VG/AppData/Local/Temp/7zOA564.tmp/jasperreports_extension.properties",
+		"/E/Tomcat/FortierraApplications/FortierraReports/WEB-INF/classes/jasperreports_extension.properties",
+		"/C/Users/jjophin.VG/AppData/Local/Temp/7zOCD10.tmp/jasperreports_extension.properties",
+		"/E/Fortierra Projects/FortierraReports/src/main/resources/jasperreports_extension.properties",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/params.json",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/stylesheets/pygment_trac.css",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/src/yam-service-old.js",
+		"/D/Program Files (x86)/Jaspersoft/iReport-5.5.1/ireport/hibernate.cfg.xml",
+		"/C/Users/jjophin.VG/Documents/psdownloader/psdownloader2.dat",
+		"/C/Users/jjophin.VG/Documents/psdownloader1/psdownloader.dat",
+		"/C/Pluralsight Downloader/CourseDownloader.Utility.dll",
+		"/E/Disassembled/PSDownloader/lib/CourseDownloader.Utility.dll",
+		"/C/Users/jjophin.VG/Documents/psdownloader/psdownloader.dat",
+		"/C/Users/jjophin.VG/Documents/GitHub/custom-events/src/customevents.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/yam-framework/yamf.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/custom-events/examples/example.html",
+		"/C/Users/jjophin.VG/Documents/GitHub/custom-events/examples/sample-library.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/custom-events/README.md",
+		"/E/Spring Workspace/Fortierra/src/main/resources/fortierra-1.7.sql",
+		"/C/Users/jjophin.VG/Documents/GitHub/org-chart/README.md",
+		"/C/Users/jjophin.VG/Documents/GitHub/custom-events/customevents.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/org-chart/src/OrgChart.js",
+		"/C/Users/jjophin.VG/Documents/GitHub/org-chart/examples/example.html",
+		"/E/Sublime Projects/github.sublime-project",
+		"/D/restore.py",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/messagehandler.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/utilities/docwidget.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/property/SystemTypes.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/common.js",
+		"/D/compress.py",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/dashboard/dashboard.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/dashboard.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/css/dark.css",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/property/woning.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/property/woningTab.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/css/style.css",
+		"/E/Workspaces/Javascript Workspace/VG Codes/VG Org Chart/OrgChart.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/login.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/notification.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/index.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/documentservice.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/commercialpages/hvgr/hvgrbusiness.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/main.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/commercialpages/dvgp/dvgplogin.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/css/login.css",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/pccard/usersLookup.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/lib/fullcalendar/gcal.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/NotaryReport/EditOrderRequest.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/WEB-INF/AccessControl.json",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/DashboardNotification/createnotification.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/report_index.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/css/main.css",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/omgeving.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/jquery.mediaTable.min.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/property/systemtypedetails.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/Group/creategroup.html",
+		"/E/Workspaces/Javascript Workspace/VG Codes/VG Org Chart/orgchart.html",
+		"/E/Workspaces/Javascript Workspace/org-chart/README.md",
+		"/E/Workspaces/Javascript Workspace/org-chart/README",
+		"/E/Workspaces/Javascript Workspace/My Org Chart/OrgChart.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/nicedit/nicEdit.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/group.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/orderservice.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/NotaryReport/fifth.htm",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/pcgroups/editpcgroup.html",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/NotaryReport/first.htm",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/faq.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/utilities/fileapi.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/orderlineservice.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/old_orderservice.js",
+		"/E/Deleted from fortierra/old_orderservice.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/NotaryReport/forth.htm",
+		"/C/Users/jjophin.VG/Desktop/backup_orderservice.js",
+		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/new_orderservice.js",
+		"/C/Users/jjophin.VG/Desktop/orderservice_backup - Copy.js",
+		"/C/Users/jjophin.VG/Desktop/orderlineservice.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"E:\\Spring Workspace\\Fortierra\\src\\main\\webapp",
+			"E:\\Spring Workspace\\Fortierra\\src\\main\\webapp\\js",
+			"E:\\Spring Workspace\\Fortierra\\src\\main\\webapp",
+			"E:\\Spring Workspace\\Fortierra\\src\\main\\webapp\\js",
+			"<open files>",
+			"",
+			"<open files>",
+			"",
+			"tree.css",
+			"untitled",
+			"",
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"        ",
+			"            ",
+			"class",
+			"insertat",
+			"parentElmt",
+			"lastModified",
+			"renderBoard",
+			" \n",
+			">\n",
+			"\n.",
+			"div",
+			"bottom",
+			"rounded",
+			"    ",
+			"clickout",
+			"on",
+			"UploaderConstants",
+			"Controller",
+			"List",
+			"title",
+			"boards",
+			"1",
+			"Event",
+			"event",
+			"width",
+			"-",
+			"dataService",
+			",",
+			";",
+			"var",
+			"noObjects",
+			"averriddenFn",
+			"setters",
+			"return",
+			"</b>",
+			"<b>",
+			" -",
+			"beforeSyncGet",
+			"getOriginalData",
+			"getChildModel",
+			"isModelChanged",
+			"setOriginalData",
+			"getOriginalData",
+			"getServiceData",
+			"this[",
+			"__originalData",
+			"\"originalData\"",
+			"restConfig",
+			"getServiceData",
+			"beforeValueSet",
+			"beforeValueGet",
+			"afterValueSet",
+			"beforeValueSet",
+			"JavaScript",
+			"javascript",
+			"JavaScript",
+			"body",
+			"content_table",
+			"header_wrap",
+			"main_content_wrap",
+			"ruby",
+			"HTML",
+			"html",
+			"transition",
+			"font-family",
+			"class=\"filename-link\"",
+			"<a href=\"//dl-web.",
+			"<img ",
+			"setOriginalData",
+			"curry",
+			"syncServiceToModel",
+			"setOriginalData",
+			"Constructor",
+			"constructor",
+			"userConstructor",
+			"dataPosition",
+			"createPrototype",
+			"curry",
+			"mapOptions",
+			"<div>",
+			"display: none",
+			"debugger",
+			" a",
+			"a",
+			"li",
+			"getType",
+			"services",
+			"services[j]",
+			"attachServices",
+			"validateValue",
+			"setSpecificConfig",
+			" =",
+			"&&",
+			"model",
+			"serviceConfig",
+			"getSpecificValue",
+			"cumulate",
+			"inputObj",
+			"setIfDefined",
+			"inputObj",
+			"parent",
+			"modelConfig",
+			"services",
+			"Services",
+			"services",
+			"modelClass",
+			"extraProtoFns",
+			"protofns",
+			"obj",
+			"inputObj",
+			"variableName",
+			".get",
+			"olReport",
+			"ReportConstants",
+			"public",
+			"PDFUtilities",
+			"	private List<PDFAttachmentInfo>",
+			"\"",
+			"\\",
+			" get",
+			"model",
+			"436F 756E 7400 0000 0000 00",
+			"4368 6170 7465 7273",
+			"0000 0331",
+			"0331$",
+			"0331",
+			"0331 00b2",
+			"0331"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			">",
+			"src=\"<$1>\"",
+			"<[$1]>",
+			"<div style=\"$1$2\"",
+			"<div.*style=\"$1$2\"",
+			"code.dir",
+			"\\\\\"",
+			"\\\"",
+			"\\n[ProjectID]"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/HTML files/hash.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/HTML files/history.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/HTML files/nodecount.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 322.0
+	},
+	"project": "html.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"comm",
+				"js\\common.js"
+			],
+			[
+				"dash",
+				"dashboard\\dashboard.html"
+			],
+			[
+				"woning",
+				"js\\woning.js"
+			],
+			[
+				"system",
+				"property\\SystemTypes.html"
+			],
+			[
+				"docwidget",
+				"js\\utilities\\docwidget.js"
+			],
+			[
+				"common",
+				"js\\common.js"
+			],
+			[
+				"login",
+				"js\\login.js"
+			],
+			[
+				"main",
+				"js\\main.js"
+			],
+			[
+				"message",
+				"js\\messagehandler.js"
+			],
+			[
+				"docwid",
+				"js\\utilities\\docwidget.js"
+			],
+			[
+				"edit",
+				"NotaryReport\\EditOrderRequest.html"
+			],
+			[
+				"group.js",
+				"js\\group.js"
+			],
+			[
+				"fifth",
+				"NotaryReport\\fifth.htm"
+			],
+			[
+				"first",
+				"NotaryReport\\first.htm"
+			],
+			[
+				"fileap",
+				"js\\utilities\\fileapi.js"
+			],
+			[
+				"documentser",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"common.js",
+				"js\\common.js"
+			],
+			[
+				"orderser",
+				"js\\services\\orderservice.js"
+			],
+			[
+				"orderline",
+				"NotaryReport\\OrderLineDetail.html"
+			],
+			[
+				"groups",
+				"js\\group.js"
+			],
+			[
+				"create",
+				"Group\\creategroup.html"
+			],
+			[
+				"ver",
+				"js\\verzekeringen.js"
+			],
+			[
+				"pcgrou",
+				"pcgroups\\editpcgroup.html"
+			],
+			[
+				"orders",
+				"NotaryReport\\Orders.html"
+			],
+			[
+				"limite",
+				"property\\limitedadmin.html"
+			],
+			[
+				"tbale",
+				"js\\utilities\\table.js"
+			],
+			[
+				"creat",
+				"Group\\creategroup.html"
+			],
+			[
+				"order",
+				"NotaryReport\\Orders.html"
+			],
+			[
+				"docserv",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"docwi",
+				"js\\utilities\\docwidget.js"
+			],
+			[
+				"pc",
+				"pccard\\pccard.html"
+			],
+			[
+				"pcard",
+				"pccard\\pccard.html"
+			],
+			[
+				"userslook",
+				"pccard\\usersLookup.html"
+			],
+			[
+				"docw",
+				"js\\utilities\\docwidget.js"
+			],
+			[
+				"editorder",
+				"NotaryReport\\EditOrderRequest.html"
+			],
+			[
+				"style",
+				"css\\style.css"
+			],
+			[
+				"qualit",
+				"property\\QualityStandarddetails.html"
+			],
+			[
+				"notification",
+				"js\\notification.js"
+			],
+			[
+				"createnotification",
+				"DashboardNotification\\createnotification.html"
+			],
+			[
+				"prope",
+				"property\\propertyList.html"
+			],
+			[
+				"won",
+				"property\\woningTab.html"
+			],
+			[
+				"tek",
+				"property\\techniek.html"
+			],
+			[
+				"createf",
+				"faq\\createFaq.html"
+			],
+			[
+				"fa",
+				"js\\faq.js"
+			],
+			[
+				"communicat",
+				"property\\communicatie.html"
+			],
+			[
+				"ener",
+				"js\\energie.js"
+			],
+			[
+				"createpro",
+				"js\\createproperty.js"
+			],
+			[
+				"megi",
+				"js\\omgeving.js"
+			],
+			[
+				"doc",
+				"js\\utilities\\docwidget.js"
+			],
+			[
+				"documente",
+				"property\\documenten.html"
+			],
+			[
+				"document",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"orderlinedeti",
+				"NotaryReport\\OrderLineDetail.html"
+			],
+			[
+				"creategroup",
+				"Group\\creategroup.html"
+			],
+			[
+				"bread",
+				"js\\utilities\\breadcrumb.js"
+			],
+			[
+				"documen",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"documn",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"docser",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"group.",
+				"js\\group.js"
+			],
+			[
+				"creategr",
+				"Group\\creategroup.html"
+			],
+			[
+				"orderlined",
+				"NotaryReport\\OrderLineDetail.html"
+			],
+			[
+				"def",
+				"property\\DefaultDocuments.html"
+			],
+			[
+				"l",
+				"js\\login.js"
+			],
+			[
+				"main.",
+				"js\\main.js"
+			],
+			[
+				"defau",
+				"property\\DefaultDocuments.html"
+			],
+			[
+				"createg",
+				"Group\\creategroup.html"
+			],
+			[
+				"group",
+				"pcgroups\\editpcgroup.html"
+			],
+			[
+				"editor",
+				"NotaryReport\\EditOrderRequest.html"
+			],
+			[
+				"documentse",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"first.",
+				"NotaryReport\\first.htm"
+			],
+			[
+				"edito",
+				"NotaryReport\\EditOrderRequest.html"
+			],
+			[
+				"documenter",
+				"js\\services\\documentservice.js"
+			],
+			[
+				"main.js",
+				"js\\main.js"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"ma",
+				"css\\main.css"
+			],
+			[
+				"table",
+				"js\\utilities\\table.js"
+			],
+			[
+				"edi",
+				"NotaryReport\\EditOrderRequest.html"
+			],
+			[
+				"fileapi",
+				"js\\utilities\\fileapi.js"
+			],
+			[
+				"pccard",
+				"pccard\\pccardtab.html"
+			],
+			[
+				"orderlin",
+				"NotaryReport\\OrderLineDetail.html"
+			],
+			[
+				"order.",
+				"js\\order.js"
+			],
+			[
+				"ord",
+				"NotaryReport\\OrderRequest.html"
+			],
+			[
+				"commo",
+				"js\\common.js"
+			],
+			[
+				"pccardta",
+				"pccard\\pccardtab.html"
+			],
+			[
+				"order.js",
+				"js\\order.js"
+			],
+			[
+				"orderd",
+				"NotaryReport\\EditOrderRequest.html"
+			],
+			[
+				"orderre",
+				"NotaryReport\\OrderRequest.html"
+			],
+			[
+				"documneten",
+				"property\\documenten.html"
+			],
+			[
+				"propertl",
+				"property\\propertyList.html"
+			],
+			[
+				"tree.c",
+				"Tree/tree.css"
+			],
+			[
+				"multipleselectgrid",
+				" Multiple Select Grid/list.js"
+			],
+			[
+				"multiple",
+				"Minified Scripts/Multiple Select Grid/list.js"
+			],
+			[
+				"multip",
+				" Multiple Select Grid/combinedcss.css"
+			],
+			[
+				"uploadto",
+				"Upload File/uploadToAppObject.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"f",
+				"E:\\Sublime Projects\\fortierra.sublime-project"
+			],
+			[
+				"",
+				"E:\\Sublime Projects\\angular.sublime-project"
+			],
+			[
+				"vgco",
+				"E:\\Sublime Projects\\vgcodes.sublime-project"
+			],
+			[
+				"an",
+				"E:\\Sublime Projects\\angular.sublime-project"
+			],
+			[
+				"for",
+				"E:\\Sublime Projects\\fortierra.sublime-project"
+			],
+			[
+				"p",
+				"E:\\Sublime Projects\\python.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 306.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

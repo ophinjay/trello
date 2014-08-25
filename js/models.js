@@ -95,18 +95,19 @@ trello.ModuleManager.define("Board", ["List", "Utilities"], function(List, Utili
     };
 });
 
-trello.ModuleManager.define("AppData", ["Board", "Card", "List"], function(Board, Card, List) {
+trello.ModuleManager.define("AppData", ["Board", "Card", "List", "Utilities"], function(Board, Card, List, Utilities) {
 
     var boards = [];
 
     function getData() {
-        //var data = JSON.parse(localStorage["trello"]);
-        var datas = trello.data;
-        if (datas) {
-            datas.forEach(function(data, index) {
-                data.index = index;
-                boards.push(Board.create(data));
-            });
+        if (localStorage["trello"]) {
+            var datas = JSON.parse(localStorage["trello"]);
+            if (datas) {
+                datas.forEach(function(data, index) {
+                    data.index = index;
+                    boards.push(Board.create(data));
+                });
+            }
         }
         return boards;
     }
@@ -145,7 +146,7 @@ trello.ModuleManager.define("AppData", ["Board", "Card", "List"], function(Board
     }
 
     function deleteBoard(board) {
-        boards.splice(board.index, 1);
+        Utilities.spliceAndUpdateIndex(boards, board.index);
     }
 
     function addList(board, title) {
@@ -166,5 +167,5 @@ trello.ModuleManager.define("AppData", ["Board", "Card", "List"], function(Board
         addCard: addCard,
         addList: addList,
         deleteBoard: deleteBoard
-    }
+    };
 });

@@ -78,6 +78,7 @@ body {
     background: #E3E3E3;
     width: 200px;
     margin-left: 25px;
+    margin-bottom: 10px;
 }
 .list>[name=header] {
     height: 20px;
@@ -156,9 +157,6 @@ textarea.newcard {
     display: inline-block;
     color: #95C11F;
     font-weight: bold;
-}
-.addlist {
-    opacity: 0.5;
 }
 .addlist:hover{
     opacity: 1;

@@ -8,7 +8,7 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
         container = Element.get(container).html("");
         dropDown = DropDown.create({
             id: "boards",
-            heading: "Boards",
+            tabName: "Boards",
             container: container,
             tabWidth: 55
         });
@@ -127,7 +127,7 @@ trello.ModuleManager.define("CardView", ["Events", "Utilities"], function(Events
         return {
             render: render,
             remove: remove
-        }
+        };
     })();
 
     function create(container, card, position) {
@@ -138,7 +138,7 @@ trello.ModuleManager.define("CardView", ["Events", "Utilities"], function(Events
 
     return {
         create: create
-    }
+    };
 });
 
 trello.ModuleManager.define("ListView", ["Element", "Events", "CardView", "Utilities"], function(Element, Events, CardView, Utilities) {
@@ -147,7 +147,6 @@ trello.ModuleManager.define("ListView", ["Element", "Events", "CardView", "Utili
     function ListView(container, list, index) {
         this.container = container;
         this.list = list;
-        this.clickoutHandler = clickoutHandler.bind(this, "outside-clicked");
     }
 
     function clickoutHandler(clickLocation, eventObject) {
@@ -247,11 +246,11 @@ trello.ModuleManager.define("ListView", ["Element", "Events", "CardView", "Utili
             render: render,
             addCard: addCard,
             remove: remove
-        }
+        };
     })();
 
     function create(container, list) {
-        var list = new ListView(container, list);
+        list = new ListView(container, list);
         list.render();
         return list;
     }
