@@ -452,7 +452,7 @@ trello.ModuleManager.define("Utilities", ["Element"], function(Element) {
 
     /**
      *	Used by model classes to delete an element from the specified index position and to update
-     *	index proprty of succeeding elements in the array
+     *	index property of subsequent elements in the array
      *	** Inputs **
      *	array - array of model class objects
      *	index - index that is to be deleted

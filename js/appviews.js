@@ -3,6 +3,7 @@
 trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], function(Element, DropDown, Events) {
 
     var dropDown;
+    var entries = [];
 
     function render(container, boards) {
         container = Element.get(container).html("");
@@ -36,7 +37,8 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
     }
 
     function addToDropDown(board, index) {
-        dropDown.addEntry(board.title, index + 1).on("click", menuEntryClickHandler.bind(board));
+        var newEntry = dropDown.addEntry(board.title, index + 1).on("click", menuEntryClickHandler.bind(board));
+        entries.push(newEntry);
     }
 
     function add(board) {
@@ -47,10 +49,15 @@ trello.ModuleManager.define("BoardMenuView", ["Element", "DropDown", "Events"], 
         dropDown.remove(board.index);
     }
 
+    function refresh(board) {
+        entries[board.index].html(board.title);
+    }
+
     return {
         render: render,
         add: add,
-        remove: remove
+        remove: remove,
+        refresh: refresh
     };
 });
 

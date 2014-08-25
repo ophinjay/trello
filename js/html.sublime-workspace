@@ -1130,7 +1130,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1158,7 +1160,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage"
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1186,7 +1190,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1625,12 +1631,12 @@
 		"selected_items":
 		[
 			[
-				"f",
-				"E:\\Sublime Projects\\fortierra.sublime-project"
+				"",
+				"E:\\Sublime Projects\\github.sublime-project"
 			],
 			[
-				"",
-				"E:\\Sublime Projects\\angular.sublime-project"
+				"f",
+				"E:\\Sublime Projects\\fortierra.sublime-project"
 			],
 			[
 				"vgco",

@@ -32,7 +32,8 @@ trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppDa
     }
 
     function boardUpdateListener(data) {
-    	data["board"].title = data["newTitle"];
+        AppData.setBoardTitle(data["board"], data["newTitle"]);
+        BoardMenuView.refresh(data["board"]);
         AppData.saveData();
     }
 
@@ -50,7 +51,7 @@ trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppDa
     }
 
     function cardUpdateListener(data) {
-    	data["card"].content = data["newContent"];
+        AppData.setCardContent(data["card"], data["newContent"]);
     	AppData.saveData();
     }
 
@@ -67,7 +68,7 @@ trello.ModuleManager.define("Application", ["BoardView", "BoardMenuView", "AppDa
     }
 
     function listUpdateListener(data) {
-    	data["list"].title = data["newTitle"];
+        AppData.setListTitle(data["list"], data["newTitle"]);
     	AppData.saveData();
     }
     
