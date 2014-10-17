@@ -4,16 +4,28 @@
 		"selected_items":
 		[
 			[
-				"sc",
+				"script",
 				"script	Tag"
 			],
 			[
-				"script",
-				"script	HTML - Script"
+				"max",
+				"max-width"
+			],
+			[
+				"back",
+				"background"
 			],
 			[
 				"style",
-				"style	Tag"
+				"style	<style>"
+			],
+			[
+				"counter",
+				"counter-increment"
+			],
+			[
+				"sc",
+				"script	Tag"
 			],
 			[
 				"vi",
@@ -114,10 +126,6 @@
 			[
 				"border-ra",
 				"border-bottom-right-radius"
-			],
-			[
-				"max",
-				"max-height"
 			],
 			[
 				"no",
@@ -506,40 +514,24 @@
 			[
 				"wid",
 				"widgetObj"
-			],
-			[
-				"desc",
-				"description"
-			],
-			[
-				"move",
-				"moveDialog"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/D/HTML files/hash.html",
+			"file": "/D/HTML files/count.html",
 			"settings":
 			{
-				"buffer_size": 359,
+				"buffer_size": 1207,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/HTML files/history.html",
+			"file": "/D/HTML files/layout.html",
 			"settings":
 			{
-				"buffer_size": 556,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/HTML files/nodecount.html",
-			"settings":
-			{
-				"buffer_size": 355,
+				"buffer_size": 36631,
 				"line_ending": "Windows"
 			}
 		}
@@ -796,8 +788,11 @@
 	},
 	"file_history":
 	[
-		"/D/HTML files/test.html",
 		"/D/HTML files/float.html",
+		"/D/HTML files/hash.html",
+		"/D/HTML files/history.html",
+		"/D/HTML files/nodecount.html",
+		"/D/HTML files/test.html",
 		"/C/Users/jjophin.VG/Documents/GitHub/trello/css/common.css",
 		"/C/Users/jjophin.VG/Documents/GitHub/trello/css/trello.css",
 		"/E/NetBeansProjects/CPFUploader/src/cpfuploader/utilities/XMLUtilities.java",
@@ -920,10 +915,7 @@
 		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/old_orderservice.js",
 		"/E/Deleted from fortierra/old_orderservice.js",
 		"/E/Spring Workspace/Fortierra/src/main/webapp/NotaryReport/forth.htm",
-		"/C/Users/jjophin.VG/Desktop/backup_orderservice.js",
-		"/E/Spring Workspace/Fortierra/src/main/webapp/js/services/new_orderservice.js",
-		"/C/Users/jjophin.VG/Desktop/orderservice_backup - Copy.js",
-		"/C/Users/jjophin.VG/Desktop/orderlineservice.js"
+		"/C/Users/jjophin.VG/Desktop/backup_orderservice.js"
 	],
 	"find":
 	{
@@ -954,6 +946,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"a",
+			"li",
+			"ul",
+			"ol",
 			"        ",
 			"            ",
 			"class",
@@ -1077,11 +1073,7 @@
 			"model",
 			"436F 756E 7400 0000 0000 00",
 			"4368 6170 7465 7273",
-			"0000 0331",
-			"0331$",
-			"0331",
-			"0331 00b2",
-			"0331"
+			"0000 0331"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1108,91 +1100,60 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/HTML files/hash.html",
+					"file": "/D/HTML files/count.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 359,
+						"buffer_size": 1207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								235,
-								235
+								343,
+								343
 							]
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/HTML files/history.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 556,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								144,
-								155
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/D/HTML files/nodecount.html",
+					"buffer": 1,
+					"file": "/D/HTML files/layout.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 355,
+						"buffer_size": 36631,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								220,
-								220
+								1271,
+								1256
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1632,7 +1593,7 @@
 		[
 			[
 				"",
-				"E:\\Sublime Projects\\github.sublime-project"
+				"E:\\Sublime Projects\\CPFMobileApproval.sublime-project"
 			],
 			[
 				"f",
